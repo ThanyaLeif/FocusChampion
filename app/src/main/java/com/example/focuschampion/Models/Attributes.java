@@ -1,9 +1,9 @@
 package com.example.focuschampion.Models;
 
 public class Attributes {
-    public int id;
-    public int taskId;
-    public int skillId;
+    private int id;
+    private int taskId;
+    private int skillId;
 
     public Attributes(int id, int taskId, int skillId) {
         this.id = id;

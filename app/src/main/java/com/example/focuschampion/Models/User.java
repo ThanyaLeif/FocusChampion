@@ -1,8 +1,8 @@
 package com.example.focuschampion.Models;
 
 public class User {
-    public String nickname;
-    public String password;
+    private String nickname;
+    private String password;
 
     public User(String nickname, String password) {
         this.nickname = nickname;

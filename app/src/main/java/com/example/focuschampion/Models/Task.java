@@ -1,12 +1,12 @@
 package com.example.focuschampion.Models;
 
 public class Task {
-    public int id;
-    public String name;
-    public String description;
-    public String userId;
-    public TaskState state;
-    public DifficultyLevel difficulty;
+    private int id;
+    private String name;
+    private String description;
+    private String userId;
+    private TaskState state;
+    private DifficultyLevel difficulty;
 
     private enum DifficultyLevel{
         EASY, MEDIUM, HARD;

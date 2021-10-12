@@ -1,8 +1,8 @@
 package com.example.focuschampion.Models;
 
 public class Skill {
-    public int id;
-    public String name;
+    private int id;
+    private String name;
 
     public Skill(int id, String name) {
         this.id = id;
