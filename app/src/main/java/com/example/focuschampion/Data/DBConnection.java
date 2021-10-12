@@ -1,13 +1,8 @@
 package com.example.focuschampion.Data;
 
 import android.content.Context;
-import android.content.pm.InstrumentationInfo;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import androidx.annotation.Nullable;
-
-import java.sql.Struct;
 
 public class DBConnection extends SQLiteOpenHelper {
 
@@ -33,7 +28,7 @@ public class DBConnection extends SQLiteOpenHelper {
             "_taskId int, _skillId int)";
 
     public DBConnection(Context context) {
-        super(context, "db_focus_champion", null, 7);
+        super(context, "db_focus_champion", null, 1);
     }
 
     @Override
