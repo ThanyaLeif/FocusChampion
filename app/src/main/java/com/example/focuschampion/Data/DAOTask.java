@@ -50,7 +50,20 @@ public class DAOTask {
     public ArrayList<Task> getAll(){
         ArrayList<Task> list = new ArrayList<>();
 
-        Cursor cursor = database.rawQuery("SELECT * FROM task", new String[]{});
+        Cursor cursor = database.rawQuery("SELECT * FROM task ", new String[]{});
+
+        while (cursor.moveToNext()){
+            list.add(fromCursor(cursor));
+        }
+
+        return list;
+    }
+
+    public ArrayList<Task> getAllFromUser(Task task){
+        ArrayList<Task> list = new ArrayList<>();
+
+        Cursor cursor = database.rawQuery("SELECT * FROM task WHERE _userId=?",
+                new String[]{});
 
         while (cursor.moveToNext()){
             list.add(fromCursor(cursor));
