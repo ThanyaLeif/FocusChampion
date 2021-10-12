@@ -1,17 +1,17 @@
 package com.example.focuschampion.Models;
 
-public class Attributes {
+public class Attribute {
     private int id;
     private int taskId;
     private int skillId;
 
-    public Attributes(int id, int taskId, int skillId) {
+    public Attribute(int id, int taskId, int skillId) {
         this.id = id;
         this.taskId = taskId;
         this.skillId = skillId;
     }
 
-    public Attributes() {
+    public Attribute() {
     }
 
     public int getId() {
