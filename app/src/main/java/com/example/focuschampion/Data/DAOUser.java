@@ -1,6 +1,5 @@
 package com.example.focuschampion.Data;
 
-import android.app.SharedElementCallback;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -9,10 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.focuschampion.Models.User;
 
 import java.util.ArrayList;
-import java.util.Currency;
 
 public class DAOUser {
-    private SQLiteDatabase database;
+    private final SQLiteDatabase database;
 
     public DAOUser(Context context) {
         database = new DBConnection(context).getWritableDatabase();
@@ -51,9 +49,9 @@ public class DAOUser {
         return list;
     }
     
-    public User get(User user){
+    public User get(String nickname){
         Cursor cursor = database.rawQuery("SELECT * FROM user WHERE _nickname=? LIMIT 1",
-                new String[] {user.getNickname()});
+                new String[] {nickname});
 
         cursor.moveToNext();
 

@@ -8,12 +8,12 @@ public class Task {
     private TaskState state;
     private DifficultyLevel difficulty;
 
-    private enum DifficultyLevel{
-        EASY, MEDIUM, HARD;
+    public enum TaskState{
+        ACTIVE, FINISHED, CANCELED
     }
 
-    private enum TaskState{
-        ACTIVE, FINISHED, CANCELED
+    public enum DifficultyLevel{
+        EASY, MEDIUM, HARD;
     }
 
     public Task(int id, String name, String description, String userId,
@@ -75,5 +75,37 @@ public class Task {
 
     public void setDifficulty(DifficultyLevel difficulty) {
         this.difficulty = difficulty;
+    }
+
+    public String getStringState(){
+        String state = "";
+        switch (this.state) {
+            case ACTIVE:
+                state = "ACTIVE";
+                break;
+            case CANCELED:
+                state = "CANCELED";
+                break;
+            case FINISHED:
+                state = "FINISHED";
+                break;
+        }
+        return state;
+    }
+
+    public String getStringDifficulty(){
+        String difficulty = "";
+        switch (this.difficulty){
+            case EASY:
+                difficulty = "EASY";
+                break;
+            case MEDIUM:
+                difficulty = "MEDIUM";
+                break;
+            case HARD:
+                difficulty = "HARD";
+                break;
+        }
+        return difficulty;
     }
 }
