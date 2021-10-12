@@ -21,7 +21,8 @@ public class DBConnection extends SQLiteOpenHelper {
 
     private String CREATE_TABLE_POINTS = "create table points (" +
             "_id integer primary key autoincrement," +
-            "_userId text, _accumulatedPoints int)";
+            "_skillId integer, _userId text," +
+            "_accumulatedPoints int)";
 
     private String CREATE_TABLE_ATTRIBUTE = "create table attribute (" +
             "_id integer primary key autoincrement," +

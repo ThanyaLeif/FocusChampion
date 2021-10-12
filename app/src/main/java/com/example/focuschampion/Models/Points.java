@@ -1,17 +1,27 @@
 package com.example.focuschampion.Models;
 
 public class Points {
-    public int skillId;
-    public String userId;
-    public int accumulatedPoints;
+    private int id;
+    private int skillId;
+    private String userId;
+    private int accumulatedPoints;
 
-    public Points(int skillId, String userId, int accumulatedPoints) {
+    public Points(int id, int skillId, String userId, int accumulatedPoints) {
+        this.id = id;
         this.skillId = skillId;
         this.userId = userId;
         this.accumulatedPoints = accumulatedPoints;
     }
 
     public Points() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getSkillId() {
