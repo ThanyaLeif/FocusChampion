@@ -10,13 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FocusChampion">
         <activity
-            android:name=".Views.MainActivity"
+            android:name=".Views.LoginView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Views.MainActivity"
+            android:exported="true">
         </activity>
     </application>
 
